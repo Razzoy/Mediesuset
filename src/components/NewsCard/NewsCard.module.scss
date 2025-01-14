@@ -1,0 +1,28 @@
+@use '../../styles/variables' as *;
+
+.cardStyling{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: $color-grey;
+    img{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    article{
+        margin: 0;
+        padding: 0;
+        a{
+            text-decoration: none;
+            color: white;
+            background-color: $color-dark;
+            width: 100%;
+            padding: 1rem 0;
+            text-align: center;
+        }
+    }
+}

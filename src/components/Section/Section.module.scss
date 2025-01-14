@@ -1,0 +1,11 @@
+@use '../../styles/placeholder' as *;
+
+.sectionStyling{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        @extend %trebuchet;
+    }
+}

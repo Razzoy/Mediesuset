@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'brush';
+    src: url('../src/assets/fonts/BrushScript-MT.ttf');
+}
+@font-face {
+    font-family: 'trebuchet';
+    src: url('../src/assets/fonts/Trebuchet-MS.ttf');
+}
+
+%brush{
+    font-family: 'brush';
+    font-weight: 300;
+}
+
+%trebuchet{
+    font-family: 'trebuchet';
+    font-weight: 300;
+}
