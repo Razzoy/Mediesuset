@@ -3,7 +3,6 @@ import { GridContainer } from "../components/GridContainer/GridContainer";
 import { Hero } from "../components/Hero/Hero";
 import { Section } from "../components/Section/Section";
 import { useGet } from "../hooks/useGet";
-import { NavLink } from "react-router-dom";
 
 export function FrontPage() {
   const { data, isLoading, error } = useGet(
@@ -27,7 +26,7 @@ export function FrontPage() {
                   img={item.image}
                   alt={item.title}
                   title={item.title}
-                  content={item.teaser}
+                  content={item.teaser.length > 120 ? item.teaser.substring(0, 120) + '...' : item.teaser}
                   link={`/news/${item.id}`}
                 />
               );

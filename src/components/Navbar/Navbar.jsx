@@ -1,10 +1,8 @@
 import { NavLink } from "react-router-dom";
 import style from "./Navbar.module.scss";
-import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 export function Navbar() {
-  let [isHidden, setIsHidden] = useState(true);
 
   return (
     <>
@@ -13,9 +11,9 @@ export function Navbar() {
           <li>
             <NavLink to="/">FORSIDE</NavLink>
           </li>
-          <div>
+          <div className={style.events}>
             <p>EVENTS</p>
-            <div className={isHidden ? style.dropDown : style.active}>
+            <div className={style.dropDown}>
               <li>
                 <NavLink to="lineup">LINE-UP</NavLink>
               </li>

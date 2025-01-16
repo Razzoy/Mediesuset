@@ -3,18 +3,26 @@
 .HeaderStyling{
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: end;
     justify-content: space-around;
+    padding: 1rem;
     div{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 2rem;
         
         img{
             display: block;
             width: 100%;
+            margin-bottom: -1rem;
         }
+        
     }
 }
 .date{
     margin: 0;
     @extend %brush;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    width: 100%;
 }

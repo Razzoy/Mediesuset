@@ -1,3 +1,6 @@
+@use './styles/placeholder' as *;
+
 body{
     margin: 0;
+    @extend %trebuchet;
 }

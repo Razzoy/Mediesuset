@@ -1,0 +1,91 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholder' as *;
+
+.newsStyling{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+    padding-top: 50px;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://api.mediehuset.net/images/mediesuset/crowd1-foto-colourbox.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 70%;
+        filter: brightness(25%);
+        z-index: -1;
+    }
+    h2{
+        font-size: 2.4rem;
+        font-weight: 800;
+        color: white;
+        padding: 0;
+        margin: 0;
+    }
+    p{
+        color: white;
+    }
+    
+}
+
+.subscribeStyling{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 3rem;
+    div:first-child{
+        background-color: $color-grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 3rem;
+        svg{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+    .newsButton{
+        height: 100%;
+        width: 8rem;
+        border: none;
+        background-color: $color-blue;
+        color: white;
+        cursor: pointer;
+    }
+
+    .disabled{
+        @extend .newsButton;
+        background-color: $color-dark;
+        color: $color-grey;
+        cursor: not-allowed;
+        opacity: 0.9;
+    }
+}
+
+.popupMessage {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: $color-green;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px #00000033;
+    font-size: 1rem;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.popupMessage.hide{
+    opacity: 0;
+}

@@ -1,0 +1,13 @@
+.inputStyling{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 0;
+    height: 100%;
+    border: none;
+    width: 20rem;
+    &:focus{
+        outline: none;
+    }
+}
